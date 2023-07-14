@@ -6,12 +6,12 @@ import { ERROR_MESSAGES } from "./constant/api.message";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.setGlobalPrefix("/digimro/api");
+  app.setGlobalPrefix("/api");
 
   const config = new DocumentBuilder()
-    .setTitle('Digimro Api Collection')
+    .setTitle('Api Collection')
     .setVersion('1.0')
-    .addTag('Digimro')
+    .addTag('Moglix-Online')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
